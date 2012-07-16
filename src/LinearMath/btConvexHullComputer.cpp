@@ -579,11 +579,27 @@ class btConvexHullInternal
 		template<typename UWord, typename UHWord> class DMul
 		{
 			private:
-				static uint32_t high(uint64_t value)
+#if 1
+      // Fix 64-bit right shift bug in release builds
+      static uint32_t high(uint64_t value)
+      {
+        struct cast_helper
+        {
+          union
+          {
+            uint32_t value64;
+            struct { uint32_t low, high; } value32;
+          };
+          cast_helper(uint64_t value) : value64(value) {}
+        };
+        return cast_helper(value).value32.high;
+      }
+#else
+      static uint32_t high(uint64_t value)
 				{
 					return (uint32_t) (value >> 32);
 				}
-				
+#endif		
 				static uint32_t low(uint64_t value)
 				{
 					return (uint32_t) value;
