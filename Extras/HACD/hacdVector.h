@@ -21,7 +21,7 @@
 
 namespace HACD
 {
-    typedef double Real;
+    typedef float Real;
 	//!	Vector dim 3.
 	template < typename T > class Vec3
 	{

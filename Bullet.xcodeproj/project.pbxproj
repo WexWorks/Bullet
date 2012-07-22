@@ -713,7 +713,7 @@
 		CA80636A15ACD1640072409F /* btGImpactConvexDecompositionShape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = btGImpactConvexDecompositionShape.cpp; sourceTree = "<group>"; };
 		CA80636B15ACD1640072409F /* btGImpactConvexDecompositionShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btGImpactConvexDecompositionShape.h; sourceTree = "<group>"; };
 		CA80636F15ACD1640072409F /* hacdCircularList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hacdCircularList.h; sourceTree = "<group>"; };
-		CA80637015ACD1640072409F /* hacdCircularList.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hacdCircularList.inl; sourceTree = "<group>"; };
+		CA80637015ACD1640072409F /* hacdCircularList.inl */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = hacdCircularList.inl; sourceTree = "<group>"; };
 		CA80637115ACD1640072409F /* hacdGraph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hacdGraph.cpp; sourceTree = "<group>"; };
 		CA80637215ACD1640072409F /* hacdGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hacdGraph.h; sourceTree = "<group>"; };
 		CA80637315ACD1640072409F /* hacdHACD.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hacdHACD.cpp; sourceTree = "<group>"; };
@@ -723,7 +723,7 @@
 		CA80637715ACD1640072409F /* hacdManifoldMesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hacdManifoldMesh.cpp; sourceTree = "<group>"; };
 		CA80637815ACD1640072409F /* hacdManifoldMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hacdManifoldMesh.h; sourceTree = "<group>"; };
 		CA80637915ACD1640072409F /* hacdVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hacdVector.h; sourceTree = "<group>"; };
-		CA80637A15ACD1640072409F /* hacdVector.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hacdVector.inl; sourceTree = "<group>"; };
+		CA80637A15ACD1640072409F /* hacdVector.inl */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = hacdVector.inl; sourceTree = "<group>"; };
 		CA80637B15ACD1640072409F /* hacdVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hacdVersion.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1733,6 +1733,7 @@
 				GCC_PREFIX_HEADER = "";
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				HEADER_SEARCH_PATHS = ../src;
+				"OTHER_CFLAGS[arch=*]" = "-DNDEBUG";
 				OTHER_LDFLAGS = "-ObjC";
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
